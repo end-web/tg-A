@@ -1,0 +1,45 @@
+{
+	"pages": [
+		{
+			"path": "pages/teacher/home/home",
+			"style": {
+				"navigationBarTitleText": "学生列表",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/teacher/record/record",
+			"style": {
+				"navigationBarTitleText": "记录作业",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/teacher/history/history",
+			"style": {
+				"navigationBarTitleText": "历史记录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/teacher/profile/profile",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "托管作业",
+		"navigationBarBackgroundColor": "#FFF8F5",
+		"backgroundColor": "#FFF8F5"
+	}
+}

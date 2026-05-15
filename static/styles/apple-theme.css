@@ -1,0 +1,31 @@
+/* Cute & Playful Theme - 托管作业 */
+
+:root {
+	--color-primary: #FF6B6B;
+	--color-primary-end: #FF8E53;
+	--color-secondary: #A78BFA;
+	--color-secondary-end: #818CF8;
+	--color-success: #34D399;
+	--color-warning: #FBBF24;
+	--color-danger: #F87171;
+	--color-bg: #FFF8F5;
+	--color-card: #FFFFFF;
+	--color-text: #2D2D3A;
+	--color-text-secondary: #9CA3AF;
+	--color-text-tertiary: #D1D5DB;
+	--color-border: #FEE2E2;
+	--radius-lg: 24px;
+	--radius-card: 20px;
+	--radius-btn: 16px;
+	--radius-input: 12px;
+	--radius-tag: 20px;
+	--shadow-card: 0 4px 20px rgba(255, 107, 107, 0.08);
+	--shadow-btn: 0 4px 16px rgba(255, 107, 107, 0.25);
+	--gradient-primary: linear-gradient(135deg, #FF6B6B, #FF8E53);
+	--gradient-secondary: linear-gradient(135deg, #A78BFA, #818CF8);
+	--gradient-success: linear-gradient(135deg, #34D399, #6EE7B7);
+}
+
+page {
+	background-color: var(--color-bg) !important;
+}

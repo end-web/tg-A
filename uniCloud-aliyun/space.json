@@ -1,0 +1,6 @@
+{
+	"provider": "aliyun",
+	"spaceId": "mp-f72cbfe6-8460-4535-bb4d-4424acd001f8",
+	"clientSecret": "TmES3faJIpHznvKfsmsFCw==",
+	"endpoint": "https://api.next.bspapp.com"
+}

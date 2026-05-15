@@ -1,0 +1,66 @@
+{
+  "bsonType": "object",
+  "required": ["student_id", "teacher_id", "subject", "status", "record_date"],
+  "permission": {
+    "read": true,
+    "create": "auth.role == 'teacher'",
+    "update": "auth.role == 'teacher' && doc.teacher_id == auth.uid",
+    "delete": "auth.role == 'teacher' && doc.teacher_id == auth.uid"
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "student_id": {
+      "bsonType": "string",
+      "description": "学生ID（students表的_id）",
+      "title": "学生ID"
+    },
+    "teacher_id": {
+      "bsonType": "string",
+      "description": "记录老师ID（users表的_id）",
+      "title": "老师ID"
+    },
+    "subject": {
+      "bsonType": "string",
+      "enum": ["语文", "数学", "英语", "物理", "化学", "其他"],
+      "description": "科目",
+      "title": "科目"
+    },
+    "content": {
+      "bsonType": "string",
+      "description": "作业内容描述",
+      "title": "作业内容"
+    },
+    "status": {
+      "bsonType": "string",
+      "enum": ["已完成", "未完成", "部分完成"],
+      "description": "完成状态",
+      "title": "完成状态"
+    },
+    "quality_score": {
+      "bsonType": "int",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "质量评分（0-5星）",
+      "title": "质量评分"
+    },
+    "quality_comment": {
+      "bsonType": "string",
+      "description": "质量评价",
+      "title": "质量评价"
+    },
+    "record_date": {
+      "bsonType": "string",
+      "description": "记录日期（YYYY-MM-DD）",
+      "title": "记录日期"
+    },
+    "create_date": {
+      "bsonType": "timestamp",
+      "description": "创建时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    }
+  }
+}

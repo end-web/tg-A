@@ -1,0 +1,48 @@
+{
+  "bsonType": "object",
+  "required": ["openid", "role", "name"],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": "doc._id == auth.uid",
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "openid": {
+      "bsonType": "string",
+      "description": "微信openid",
+      "title": "微信openid"
+    },
+    "role": {
+      "bsonType": "string",
+      "enum": ["teacher", "parent"],
+      "description": "角色：teacher=老师，parent=家长",
+      "title": "角色"
+    },
+    "name": {
+      "bsonType": "string",
+      "description": "姓名",
+      "title": "姓名"
+    },
+    "phone": {
+      "bsonType": "string",
+      "description": "手机号",
+      "title": "手机号"
+    },
+    "avatar": {
+      "bsonType": "string",
+      "description": "头像URL",
+      "title": "头像"
+    },
+    "create_date": {
+      "bsonType": "timestamp",
+      "description": "创建时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    }
+  }
+}

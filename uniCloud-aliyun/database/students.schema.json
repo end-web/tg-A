@@ -1,0 +1,47 @@
+{
+  "bsonType": "object",
+  "required": ["name"],
+  "permission": {
+    "read": true,
+    "create": "auth.role == 'teacher'",
+    "update": "auth.role == 'teacher'",
+    "delete": "auth.role == 'teacher'"
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "name": {
+      "bsonType": "string",
+      "description": "学生姓名",
+      "title": "学生姓名"
+    },
+    "grade": {
+      "bsonType": "string",
+      "description": "年级",
+      "title": "年级"
+    },
+    "class": {
+      "bsonType": "string",
+      "description": "班级",
+      "title": "班级"
+    },
+    "parent_id": {
+      "bsonType": "string",
+      "description": "关联家长ID（users表的_id）",
+      "title": "家长ID"
+    },
+    "avatar": {
+      "bsonType": "string",
+      "description": "头像URL",
+      "title": "头像"
+    },
+    "create_date": {
+      "bsonType": "timestamp",
+      "description": "创建时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    }
+  }
+}

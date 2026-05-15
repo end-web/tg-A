@@ -13,14 +13,20 @@ exports.main = async (event, context) => {
 		}
 
 		try {
+			const appid = process.env.WX_APPID || 'wxe1ad102c8c75995e'
+			const secret = process.env.WX_APPSECRET
+			if (!secret) {
+				return { code: 500, message: '云函数未配置 WX_APPSECRET 环境变量' }
+			}
+
 			// 调用微信登录接口获取 openid
 			const res = await uniCloud.httpclient.request(
 				'https://api.weixin.qq.com/sns/jscode2session',
 				{
 					method: 'GET',
 					data: {
-						appid: 'wxe1ad102c8c75995e',
-						secret: '83adb806ecc63ec3d2019352222d3b04',
+						appid,
+						secret,
 						js_code: code,
 						grant_type: 'authorization_code'
 					},
